@@ -1,0 +1,39 @@
+.matrix-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.matrix {
+    position: absolute;
+    color: #0f0;
+    /* Cor padrão das letras */
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 0.8;
+    /* Opacidade dos caracteres */
+    animation: matrix-flow 15s linear infinite;
+    /* Animação de fluxo */
+}
+
+.blue {
+    color: #007bff;
+    /* Cor azul para algumas letras */
+    text-shadow: 0 0 5px #007bff;
+    /* Sombra azul para destacar as letras */
+}
+
+@keyframes matrix-flow {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(110vh);
+        /* Mova as letras para fora da tela */
+    }
+}
